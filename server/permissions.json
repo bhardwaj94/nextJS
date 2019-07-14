@@ -1,0 +1,31 @@
+{
+  "roles": [
+    "Admin",
+    "Manager",
+    "Tester"
+  ],
+  "routes": {
+    "/": {
+      "GET": [
+        "Admin",
+        "Manager",
+        "Tester"
+      ],
+      "POST": [
+        "Admin",
+        "Manager",
+        "Tester"
+      ],
+      "PUT": [
+        "Admin",
+        "Manager",
+        "Tester"
+      ],
+      "DELETE": [
+        "Admin",
+        "Manager",
+        "Tester"
+      ]
+    }
+  }
+}

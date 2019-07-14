@@ -1,0 +1,15 @@
+*~
+*.swp
+data/
+npm-debug.log
+.DS_Store
+
+.build/*
+.next
+node_modules/
+logs/
+.coverage
+
+package-lock.json
+yarn.lock
+yarn-error.log

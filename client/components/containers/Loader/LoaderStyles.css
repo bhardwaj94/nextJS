@@ -1,0 +1,101 @@
+.progressDisplay {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  z-index: 3000000
+}
+
+.progressDisplayOpaque {
+  position: fixed;
+  background-color: rgba(255, 255, 255);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  z-index: 3000000
+}
+
+Style Attribute {
+  color: black;
+}
+
+.progressContainer {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(0%, -50%);
+}
+
+.progressText {
+  color: black;
+  font-size: 18px;
+  margin: 6px auto;
+}
+
+@-webkit-keyframes rotate_animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes rotate_animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn)
+  }
+}
+
+.circular-loader {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  -webkit-animation: rotate_animation 2s linear infinite;
+  animation: rotate_animation 2s linear infinite;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #cf022b;
+}
+
+.circular-loader:after, .circular-loader:before {
+  border-radius: 50%;
+  border: 3px solid transparent
+}
+
+.circular-loader:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border-top-color: #f7a823;
+  -webkit-animation: rotate_animation 3s linear infinite;
+  animation: rotate_animation 3s linear infinite
+}
+
+.circular-loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #cf022b;
+  -webkit-animation: rotate_animation 1.5s linear infinite;
+  animation: rotate_animation 1.5s linear infinite
+}
